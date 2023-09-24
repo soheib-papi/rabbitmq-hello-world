@@ -11,11 +11,11 @@ channel.QueueDeclare(queue: "myqueue1",
                      autoDelete: false,
                      arguments: null);
 
-const string message = "سلام پدر!";
+const string message = "Salam Papa!";
 var body = Encoding.UTF8.GetBytes(message);
 
 channel.BasicPublish(exchange: string.Empty,
-                     routingKey: "hello",
+                     routingKey: "myqueue1",
                      basicProperties: null,
                      body: body);
                     
